@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/al"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1f1ff"
+    android:orientation="vertical"
+    android:paddingBottom="27px"
+    android:paddingLeft="27px"
+    android:paddingRight="27px"
+    android:paddingTop="27px"
+    android:gravity="center"
+    >
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="1220px"
+        android:layout_height="wrap_content"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="711px"
+            android:layout_height="390px"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="711px"
+                android:layout_height="220px">
+
+                <com.zhy.autolayout.AutoFrameLayout
+                    android:layout_width="297px"
+                    android:layout_height="220px"
+                    android:background="@color/bg_blue"
+                    >
+
+                    <ImageView
+                        android:layout_width="210px"
+                        android:layout_height="140px"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/icon_bed1"
+                        />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="297px"
+                        android:layout_height="220px"
+
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_bed_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="145px"
+                            android:textStyle="bold"
+                            />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoFrameLayout>
+
+                <com.zhy.autolayout.AutoFrameLayout
+                    android:layout_width="401px"
+                    android:layout_height="220px"
+                    android:layout_marginLeft="13px"
+                    android:background="@color/bg_blue">
+
+                    <ImageView
+                        android:layout_width="210px"
+                        android:layout_height="140px"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/icon_personal1"
+                        />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="401px"
+                        android:layout_height="220px"
+
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_patient_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="87px"
+                            android:textStyle="bold"
+                            />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoFrameLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="711px"
+                android:layout_height="160px"
+                android:layout_marginTop="10px">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#27c798"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="20px"
+                        android:text="诊断信息"
+                        android:textColor="@color/white"
+                        android:textSize="27px"/>
+
+                    <com.zbiti.hospitalbedside.widget.MarqueeTextView
+                        android:id="@+id/tv_diagnosis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10px"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="45px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="495px"
+            android:layout_height="390px"
+            android:layout_marginLeft="14px"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="17px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:paddingTop="17px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pixel_60">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="220px"
+                    android:layout_height="wrap_content">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="140px"
+                        android:layout_height="@dimen/pixel_60"
+                        android:background="@drawable/ll_bg_blue"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="性别"
+                            android:textColor="@color/white"
+                            android:textSize="27px"/>
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="80px"
+                        android:layout_height="@dimen/pixel_60"
+                        android:background="@drawable/ll_bg_gray"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_black"
+                            android:textSize="27px"/>
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="220px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15px">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="140px"
+                        android:layout_height="@dimen/pixel_60"
+                        android:background="@drawable/ll_bg_blue"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="年龄"
+                            android:textColor="@color/white"
+                            android:textSize="27px"/>
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="80px"
+                        android:layout_height="@dimen/pixel_60"
+                        android:background="@drawable/ll_bg_gray"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_black"
+                            android:textSize="27px"/>
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_marginTop="14px">
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="140px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_blue"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="入院时间"
+                        android:textColor="@color/white"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="315px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_gray"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="40px">
+
+                    <TextView
+                        android:id="@+id/tv_in_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_marginTop="14px">
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="140px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_blue"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="住院号"
+                        android:textColor="@color/white"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="315px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_gray"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="40px">
+
+                    <TextView
+                        android:id="@+id/tv_patient_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_marginTop="14px">
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="140px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_blue"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID号"
+                        android:textColor="@color/white"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="315px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_gray"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="40px">
+
+                    <TextView
+                        android:id="@+id/tv_patient_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_marginTop="14px">
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="140px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_blue"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="责任医师"
+                        android:textColor="@color/white"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="315px"
+                    android:layout_height="@dimen/pixel_60"
+                    android:background="@drawable/ll_bg_gray"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="40px">
+
+                    <TextView
+                        android:id="@+id/tv_doctor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="27px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="1220px"
+        android:layout_height="178px"
+        android:layout_marginTop="20px">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ViewPager"
+            android:layout_width="1022px"
+            android:layout_height="match_parent"
+            app:viewpager_animatedHeaderImage="false"
+            app:viewpager_hideLogoWithFade="true"
+            app:viewpager_hideToolbarAndTitle="true"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="178px"
+            android:layout_height="178px"
+            android:layout_marginLeft="20px"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/codeImg"
+                android:layout_width="152px"
+                android:layout_height="152px"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题栏样式-->
+    <declare-styleable name="CustomTitleBar">
+        <!--左按钮是否可见|背景-->
+        <attr name="left_btn_visible" format="boolean"/>
+        <attr name="left_btn_src" format="reference|color"/>
+        <!--左文本是否可见|文本内容-->
+        <attr name="left_tv_visible" format="boolean"/>
+        <attr name="left_tv_text" format="string"/>
+        <!--右边按钮是否可见|背景-->
+        <attr name="right_btn_visible" format="boolean"/>
+        <attr name="right_btn_src" format="reference|color"/>
+        <!--右文本是否可见|文本内容-->
+        <attr name="right_tv_visible" format="boolean"/>
+        <attr name="right_tv_text" format="string"/>
+        <!--标题是否可见|文本内容-->
+        <attr name="title_visible" format="boolean"/>
+        <attr name="title_text" format="string"/>
+        <!--背景-->
+        <attr name="barBackground" format="reference|color"/>
+        <attr name="leftClick_finish" format="boolean"/>
+    </declare-styleable>
+
+
+    <!--切换image-->
+    <declare-styleable name="StateImageView">
+        <attr name="normalBackground" format="color|reference"/>
+        <attr name="pressedBackground" format="color|reference"/>
+        <attr name="unableBackground" format="color|reference"/>
+        <!--animation duration-->
+        <attr name="AnimationDuration" format="integer|reference"/>
+    </declare-styleable>
+    <!--分割线布局-->
+    <declare-styleable name="DividerLinearLayout">
+        <attr name="headerDividerEnable" format="boolean"/>
+        <attr name="footerDividerEnable" format="boolean"/>
+        <attr name="dividerColor" format="color"/>
+        <attr name="dividerWidth" format="dimension"/>
+        <attr name="headerDividerPaddingStart" format="dimension"/>
+        <attr name="headerDividerPaddingEnd" format="dimension"/>
+        <attr name="footerDividerPaddingStart" format="dimension"/>
+        <attr name="footerDividerPaddingEnd" format="dimension"/>
+
+    </declare-styleable>
+    <declare-styleable name="CountDownTimerButton">
+        <attr name="normalBackgroundBtn" format="reference|color"/>
+        <attr name="disableBackgroundBtn" format="reference|color"/>
+    </declare-styleable>
+    <!--ContentLayout-->
+    <declare-styleable name="ContentLayout">
+        <attr name="cl_contentLayoutId" format="reference"/>
+        <attr name="cl_loadingLayoutId" format="reference"/>
+        <attr name="cl_emptyLayoutId" format="reference"/>
+        <attr name="cl_errorLayoutId" format="reference"/>
+    </declare-styleable>
+
+    <!--切换btn-->
+    <declare-styleable name="StateButton">
+        <!--text color-->
+        <attr name="normalTextColor" format="color|reference"/>
+        <attr name="pressedTextColor" format="color|reference"/>
+        <attr name="unableTextColor" format="color|reference"/>
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference"/>
+        <attr name="strokeDashGap" format="dimension|reference"/>
+        <attr name="normalStrokeWidth" format="dimension|reference"/>
+        <attr name="pressedStrokeWidth" format="dimension|reference"/>
+        <attr name="unableStrokeWidth" format="dimension|reference"/>
+        <attr name="normalStrokeColor" format="color|reference"/>
+        <attr name="pressedStrokeColor" format="color|reference"/>
+        <attr name="unableStrokeColor" format="color|reference"/>
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference"/>
+        <attr name="pressedBackgroundColor" format="color|reference"/>
+        <attr name="unableBackgroundColor" format="color|reference"/>
+
+        <!--background radius-->
+        <attr name="radius" format="dimension|reference"/>
+        <attr name="round" format="boolean|reference"/>
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference"/>
+
+    </declare-styleable>
+
+</resources>

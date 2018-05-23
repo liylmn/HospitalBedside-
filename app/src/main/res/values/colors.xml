@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="title">#757783</color>
+    <color name="bottom_bar">#7E818A</color>
+    <color name="top1">#2a569e</color>
+    <color name="top2">#3366b9</color>
+    <color name="top3">#7390c0</color>
+    <color name="gray_shade">#d2d2d2</color>
+    <color name="middle">#d2d2d2</color>
+    <color name="bottom1">#2a569e</color>
+    <color name="bottom2">#3366b9</color>
+    <color name="bottom3">#5f8dd5</color>
+    <color name="bottom4">#7390c0</color>
+    <color name="bottom5">#8492a8</color>
+    <color name="bottom6">#9aa0a9</color>
+    <color name="bottom7">#a5a9b0</color>
+    <color name="bottom8">#b3b3b3</color>
+    <color name="bottom9">#bfbfbf</color>
+    <color name="bottom10">#d2d2d2</color>
+    <color name="font1">#FFE064</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="text_black">#03344e</color>
+    <color name="grayest">#666666</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="color_bg">#f2f7fa</color>
+    <color name="color_title">#109be6</color>
+
+    <color name="color_line">#D8E5FA</color>
+
+    <color name="bg_blue">#49a7ff</color>
+    <color name="bg_gray">#f0f0f0</color>
+
+    //tab1child色值
+    <color name="bg_tab1child_havadata">#ff6633</color>
+    <color name="bg_tab1child_nodata">#fda158</color>
+
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HospitalBedside</string>
+    <string name="uuid">UUID</string>
+    <string name="major">MAJOR</string>
+    <string name="minor">MINOR</string>
+    <string name="measured_power">Measured Distance</string>
+    <string name="transimssion_power">Transmission Power</string>
+    <string name="broadcasting_interval">Broadcasting Interval</string>
+    <string name="serial_id">Serial Id</string>
+    <string name="ibeacon_name">iBeacon Name</string>
+    <string name="connection_mode">Connection Mode</string>
+    <string name="restart_password">Reboot Password</string>
+    <string name="model">模式</string>
+    <string name="sys_serial_id">系统序列号</string>
+    <string name="setting">Setting</string>
+    <string name="save">save</string>
+    <string name="device_id">Device Id</string>
+</resources>
