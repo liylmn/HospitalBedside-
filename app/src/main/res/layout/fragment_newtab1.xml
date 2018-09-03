@@ -120,7 +120,8 @@
                         android:layout_marginTop="10px"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:textSize="45px"/>
+                        android:textSize="45px"
+                        />
 
                 </com.zhy.autolayout.AutoLinearLayout>
             </com.zhy.autolayout.AutoLinearLayout>
@@ -173,7 +174,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/text_black"
-                            android:textSize="27px"/>
+                            android:textSize="27px"
+                            />
 
                     </com.zhy.autolayout.AutoLinearLayout>
                 </com.zhy.autolayout.AutoLinearLayout>
@@ -209,7 +211,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/text_black"
-                            android:textSize="27px"/>
+                            android:textSize="27px"
+                            />
 
                     </com.zhy.autolayout.AutoLinearLayout>
                 </com.zhy.autolayout.AutoLinearLayout>
@@ -250,7 +253,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/text_black"
-                        android:textSize="27px"/>
+                        android:textSize="27px"
+                        />
 
                 </com.zhy.autolayout.AutoLinearLayout>
 
@@ -290,7 +294,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/text_black"
-                        android:textSize="27px"/>
+                        android:textSize="27px"
+                        />
 
                 </com.zhy.autolayout.AutoLinearLayout>
 
@@ -331,7 +336,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/text_black"
-                        android:textSize="27px"/>
+                        android:textSize="27px"
+                        />
 
                 </com.zhy.autolayout.AutoLinearLayout>
 
@@ -371,7 +377,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/text_black"
-                        android:textSize="27px"/>
+                        android:textSize="27px"
+                        />
 
                 </com.zhy.autolayout.AutoLinearLayout>
             </com.zhy.autolayout.AutoLinearLayout>
@@ -403,6 +410,7 @@
                 android:id="@+id/codeImg"
                 android:layout_width="152px"
                 android:layout_height="152px"
+                android:background="@mipmap/code"
                 />
         </com.zhy.autolayout.AutoLinearLayout>
     </com.zhy.autolayout.AutoLinearLayout>

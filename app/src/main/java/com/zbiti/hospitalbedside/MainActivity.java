@@ -59,7 +59,6 @@ public class MainActivity extends BaseActivity {
     private Tab2Fragment mTab2Fragment;
     private static final int REQUEST_ENABLE_BT = 2;
     private MessageReceiver mMessageReceiver;
-//    private ContentLayout mClregister;//载入加载框
     private final int TIMING_DELAY = 5000;//轮询首次延时
     private Timer mTimer1;
     private Timer mTimer2;
@@ -80,12 +79,10 @@ public class MainActivity extends BaseActivity {
         public void onReceive(Context context, Intent intent) {
             if (Intent.ACTION_TIME_TICK.equals(intent.getAction())) {
                 refreshSysTime(parseSysTime(System.currentTimeMillis() + timeDiff));
-//                requestGetBedInfo(Global.IMEI);
             }
         }
     };
 
-//    private MinewBeaconManager mMinewBeaconManager;
 
     @Override
     protected int setContentView() {
@@ -96,7 +93,6 @@ public class MainActivity extends BaseActivity {
     protected void findViews() {
 
         mViewPager = (ViewPager) findViewById(R.id.vp);
-//        mClregister = (ContentLayout) findViewById(R.id.cl_register);
         setupViewPager();
         mTextViewSysTime = (TextView) findViewById(R.id.tv_top_time);
         mTextViewSysName = (TextView) findViewById(R.id.hosname);
@@ -122,7 +118,6 @@ public class MainActivity extends BaseActivity {
     protected void initData() {
         registerMessageReceiver();
         timingRequest();
-
     }
 
     @Override
@@ -134,24 +129,12 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         Log.e("onresume", "imei");
-//        mMinewBeaconManager = MinewBeaconManager.getInstance(this);
-////        checkBluetooth();
-//        mMinewBeaconManager.startService();
-//        mMinewBeaconManager.startScan();
-//        initListener();
         if (TextUtils.isEmpty(Global.IMEI)) {
             Global.IMEI = MyUtil.getImei(getApplicationContext(), "");
         }
         Log.e("lmn", "imei" + Global.IMEI);
         refreshSysTime(parseSysTime(System.currentTimeMillis() + timeDiff));
-//        Handler handler = new Handler() {
-//            @Override
-//            public void handleMessage(Message msg) {
-//                test();
                 requestGetBedInfo(Global.IMEI);
-//            }
-//        };
-//        handler.sendEmptyMessageDelayed(1, 1000);
     }
 
     @Override
@@ -160,7 +143,6 @@ public class MainActivity extends BaseActivity {
         unregisterReceiver(mBroadcastReceiverTime);
         unregisterReceiver(mBroadcastReceiverTimingChange);
         cancelTiming();
-//        mMinewBeaconManager.stopService();
         super.onDestroy();
         RefWatcher refWatcher = MyApplication.getRefWatcher(this);
         refWatcher.watch(this);
@@ -214,31 +196,12 @@ public class MainActivity extends BaseActivity {
      * @param imei
      */
     private void requestGetBedInfo(final String imei) {
-//        HttpHelper.getInstance(getApplicationContext()).request(Constant.GetBedInfo, new
-//                GetBedInfoSendData(imei), MainDataEntity.class, new
-//                HttpCallback<MainDataEntity>() {
-//                    @Override
-//                    public void onSuccess(MainDataEntity responseInfo) {
-//                        handleResponse(responseInfo);
-//                    }
-//
-//                    @Override
-//                    public void onError() {
-//                        toast("网络连接错误!");
-//                    }
-//                });
-//        if (mClregister != null) {
-//            mClregister.loadingView(View.inflate(MainActivity.this, R.layout.view_loading, null));
-//        }
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("imei", imei);
         Log.e("url","gggggg"+Constant.GetBedInfo);
         NetApi.getMainData(params, new JsonCallback<MainDataEntity>() {
             @Override
             public void onResponse(MainDataEntity response, int id) {
-//                    if (mClregister != null) {
-//                        mClregister.showContent();
-//                    }
                 switch (response.getResultCode()) {
                     case "0":
                         Log.e("response==",response.getData().toString());
@@ -255,7 +218,10 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onFail(Call call, Exception e, int id) {
                 Log.e("lmn", "e:" + e);
-                refreshClear();
+//                refreshClear();
+                String s="{resultCode : 0,data : {\"information\":\"重症急性胰腺炎\",\"hosNum\":\"1008841169\",\"idNum\":\"119\",\"enghosName\":\"Nanjing General Hospital\",\"codeImg\":\"http://114.242.18.143:8082/eoms/qrCode.png\",\"touseNames\":[\"磺胺过敏\",\"干体重81\",\"本次前81.0\",\"预脱0\",\"防压疮\",\"防拔管\",\"防误吸\",\"防走失\"],\"clasName\":\"全费\",\"reminds2\":[\"CVC/PICC导管\",\"导尿管/膀胱穿刺\",\"CRRT导管\",\"负压引流管\",\"胃肠减压管\"],\"hosName\":\"南京军区总医院\",\"reminds\":[\"尿液计量\",\"造口液计量\",\"腹腔液计量\"],\"hosImg\":\"http://114.242.18.143:8082/eoms/hosImg.png\",\"age\":\"56\",\"userName\":\"赵黎霞\",\"gender\":\"女\",\"hosTime\":\"2017-05-25 12:17\",\"surgeryData\":\"2017-06-11 16:31\",\"bedNum\":\"6\",\"doctorName\":\"柯路\"},resMsg : 成功}";
+                Gson gson=new Gson();
+                handleResponse(gson.fromJson(s,MainDataEntity.class));
             }
         });
     }
@@ -275,7 +241,6 @@ public class MainActivity extends BaseActivity {
         mTextViewSysName.setText(Global.SYS_NAME);
         mTextViewEnghosName.setText(data.getData().getEnghosName());
         if (!TextUtils.isEmpty(data.getData().getHosTime())) {
-//            timeDiff = Long.parseLong(data.getData().getHosTime()) - System.currentTimeMillis();
         }
     }
 
@@ -341,7 +306,6 @@ public class MainActivity extends BaseActivity {
         public void onReceive(Context context, Intent intent) {
             if (MyReceiver.MESSAGE_RECEIVED_ACTION.equals(intent.getAction())) {
                 String messge = intent.getStringExtra(MyReceiver.KEY_MESSAGE);
-//                toast(messge);
                 Gson gson = new Gson();
                 RouteBean routeBean = gson.fromJson(messge, RouteBean.class);
                 if (Constant.GetBedInfoRoute.equals(routeBean.getRoute())) {
@@ -399,12 +363,6 @@ public class MainActivity extends BaseActivity {
     private void handleResponse(MainDataEntity responseInfo) {
         if ("0".equals(responseInfo.getResultCode())) {
             refreshAll(responseInfo);
-        } else if ("001".equals(responseInfo.getResultCode())) {
-
-        } else if ("002".equals(responseInfo.getResultCode())) {
-//            refreshOnlyBed(responseInfo);
-        } else if ("003".equals(responseInfo.getResultCode())) {
-            refreshClear();
         } else {
             toast("失败，错误码：" + responseInfo.getResultCode());
         }
@@ -417,13 +375,7 @@ public class MainActivity extends BaseActivity {
             super.handleMessage(msg);
             //获得刚才发送的Message对象，然后在这里进行UI操作
             Log.e("lmn", "------------> msg.what = " + msg.what);
-//            mMinewBeaconManager = MinewBeaconManager.getInstance(MainActivity.this);
-////            checkBluetooth();
-//            mMinewBeaconManager.startService();
-//            mMinewBeaconManager.startScan();
-//            initListener();
             requestGetBedInfo(Global.IMEI);
-//            Tab1Fragment.setpage();
         }
     };
 
@@ -437,7 +389,6 @@ public class MainActivity extends BaseActivity {
             public void run() {
                 mHandler.sendEmptyMessage(0);
 
-//                Tab1Fragment.setpage();
             }
         };
         mTimer2.schedule(timerTask, Global.TIMING_PERIOD, Global.TIMING_PERIOD);
@@ -455,72 +406,9 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-//    private void initListener() {
-//        //scan listener;
-//        mMinewBeaconManager.setMinewbeaconManagerListener(new MinewBeaconManagerListener() {
-//            @Override
-//            public void onUpdateBluetoothState(BluetoothState state) {
-//                switch (state) {
-//                    case BluetoothStatePowerOff:
-//                        Toast.makeText(getApplicationContext(), "bluetooth off", Toast.LENGTH_SHORT).show();
-//                        break;
-//                    case BluetoothStatePowerOn:
-//                        Toast.makeText(getApplicationContext(), "bluetooth on", Toast.LENGTH_SHORT).show();
-//                        break;
-//                }
-//            }
-//
-//            @Override
-//            public void onRangeBeacons(List<MinewBeacon> beacons) {
-//                Log.e("sendmess","4444444444"+beacons.size());
-//                String uuid=SPUtils.getValue(MainActivity.this, "uuid", "uuid", "");
-//                for (int i=0;i<beacons.size();i++){
-//                    if (!uuid.equals("")&&uuid.equals(beacons.get(i).getUuid())){
-//                    sendblue(Global.IMEI );
-//                        Log.e("sendmess","55555555"+beacons.get(i).getUuid());
-////                        toast("发送");
-//                    }
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onAppearBeacons(List<MinewBeacon> beacons) {
-////                String uuid=SPUtils.getValue(MainActivity.this, "uuid", "uuid", "");
-////                for (int i=0;i<beacons.size();i++){
-////                    if (!uuid.equals("")&&uuid.equals(beacons.get(i).getUuid())){
-////                        sendblue(Global.IMEI );
-////                    }
-////                }
-//            }
-//
-//            @Override
-//            public void onDisappearBeacons(List<MinewBeacon> beacons) {
-//
-//            }
-//        });
-//
-//
-//    }
-
-//    private void checkBluetooth() {
-//        BluetoothState bluetoothState = mMinewBeaconManager.checkBluetoothState();
-//        switch (bluetoothState) {
-//            case BluetoothStateNotSupported:
-//                Toast.makeText(this, "Not Support BLE", Toast.LENGTH_SHORT).show();
-//                finish();
-//                break;
-//            case BluetoothStatePowerOff:
-//                showBLEDialog();
-//                break;
-//            case BluetoothStatePowerOn:
-//                break;
-//        }
-//    }
 
     @Override
     protected void onPause() {
-//        mMinewBeaconManager.stopScan();
 
         super.onPause();
     }
@@ -533,34 +421,20 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-//        switch (requestCode) {
-//            case REQUEST_ENABLE_BT:
-//                mMinewBeaconManager.startScan();
-//                break;
-//        }
     }
 
     private void sendblue(final String imei) {
         Log.e("url=========",Constant.SENDMESSAGE);
-//        if (mClregister != null) {
-//            mClregister.loadingView(View.inflate(MainActivity.this, R.layout.view_loading, null));
-//        }
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("imei", imei);
         NetApi.sendblue(params, new JsonCallback<GetRoomAndBedGetData>() {
             @Override
             public void onResponse(GetRoomAndBedGetData response, int id) {
-//                if (mClregister != null) {
-//                    mClregister.showContent();
-//                }
                 switch (response.getResultCode()) {
                     case "0":
 
                         break;
                     default:
-//                        if (mClregister != null) {
-//                            mClregister.showContent();
-//                        }
                         break;
                 }
             }
@@ -568,9 +442,6 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onFail(Call call, Exception e, int id) {
                 Log.e("lmn", "e:" + e);
-//                if (mClregister != null) {
-//                    mClregister.showContent();
-//                }
             }
         });
     }

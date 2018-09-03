@@ -157,7 +157,7 @@ public class Tab1childFragment extends BaseFragment {
     public void setdata(List<String> list) {
 
         for (int i = 0; i < list.size(); i++) {
-            mtvs_num[i].setText(list.get(i));
+            mtvs[i].setText(list.get(i));
         }
 
 
@@ -166,7 +166,7 @@ public class Tab1childFragment extends BaseFragment {
     public void setdata_num(List<String> list) {
 
         for (int i = 0; i < list.size(); i++) {
-            mtvs[i].setText(list.get(i));
+            mtvs_num[i].setText(list.get(i));
         }
 
 

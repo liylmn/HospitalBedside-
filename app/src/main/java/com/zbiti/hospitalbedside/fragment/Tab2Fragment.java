@@ -1,19 +1,13 @@
 package com.zbiti.hospitalbedside.fragment;
 
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.zbiti.hospitalbedside.R;
-import com.zbiti.hospitalbedside.adapter.CatheterAdapter;
 import com.zbiti.hospitalbedside.adapter.ListArrayAdapter;
-import com.zbiti.hospitalbedside.adapter.ProtectAdapter;
 import com.zbiti.hospitalbedside.base.BaseFragment;
 import com.zbiti.hospitalbedside.entity.MainDataEntity;
 
@@ -222,6 +216,6 @@ public class Tab2Fragment extends BaseFragment implements ListArrayAdapter.OnRec
 
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(getActivity(), ""+position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), ""+position, Toast.LENGTH_SHORT).show();
     }
 }

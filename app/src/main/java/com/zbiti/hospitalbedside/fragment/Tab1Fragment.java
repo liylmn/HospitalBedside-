@@ -14,8 +14,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.androidlibrary.imageloader.ILoader;
-import com.android.androidlibrary.imageloader.ImageFactory;
 import com.zbiti.hospitalbedside.R;
 import com.zbiti.hospitalbedside.base.BaseFragment;
 import com.zbiti.hospitalbedside.entity.MainDataEntity;
@@ -124,6 +122,7 @@ public class Tab1Fragment extends BaseFragment {
      * 清除信息
      */
     public void refreshClear() {
+
         setTextViewBedNum("");
         setTextViewName("");
         mTextViewDoctor.setText("");
@@ -152,15 +151,21 @@ public class Tab1Fragment extends BaseFragment {
             mTextViewId.setText(data.getData().getIdNum());
             mTextViewDiagnosis.setText(data.getData().getInformation());
             list = new ArrayList<List<String>>();
+            list_num = new ArrayList<List<String>>();
             //文字集合
             List<String> data1=new ArrayList<String>();
             //数字集合
             List<String> data1_num=new ArrayList<String>();
-            for (int i = 0; i < data1.size(); i ++) {
-                List<String> strings=getnumb(data1.get(i));
+            for (int i = 0; i < data.getData().getTouseNames().size(); i ++) {
+                List<String> strings=getnumb( data.getData().getTouseNames().get(i));
                 if (strings.size()>1){
-                    data1.add(strings.get(0));
-                    data1_num.add(strings.get(1));
+                    if (strings.size()==3){
+                        data1.add(strings.get(0));
+                        data1_num.add(strings.get(1)+"."+strings.get(2));
+                    }else{
+                        data1.add(strings.get(0));
+                        data1_num.add(strings.get(1));
+                    }
                 }else {
                     data1.add(strings.get(0));
                     data1_num.add("");
@@ -258,13 +263,9 @@ public class Tab1Fragment extends BaseFragment {
             mTimer.schedule(timerTask, 5000,5000);
            }
         }
-        ImageFactory.getLoader().loadNet(mCodeImg,
-                data.getData().getCodeImg(), new ILoader.Options(R.mipmap.loading_img, R.mipmap.loading_img));
+//        ImageFactory.getLoader().loadNet(mCodeImg,
+//                data.getData().getCodeImg(), new ILoader.Options(R.mipmap.loading_img, R.mipmap.loading_img));
     }
-//        refreshNursing(getNursingList(data));
-
-
-
 
     private Map<String, String> createNursingMap(String content) {
         Map<String, String> map = new HashMap<>();

@@ -35,7 +35,8 @@
                         android:layout_width="70px"
                         android:layout_height="70px"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="@dimen/pixel_30"/>
+                        android:layout_marginLeft="@dimen/pixel_30"
+                        android:background="@mipmap/hospital_logo"/>
 
                     <com.zhy.autolayout.AutoLinearLayout
                         android:layout_width="wrap_content"
@@ -50,7 +51,7 @@
                             android:id="@+id/hosname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
+                            android:text="南京总医院"
                             android:textColor="@color/white"
                             android:textSize="30px"
                             />
@@ -60,7 +61,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5px"
-                            android:text=""
+                            android:text="Nanjing General Hospital"
                             android:textColor="@color/white"
                             android:textSize="14px"
                             />
@@ -82,6 +83,7 @@
                     android:paddingTop="8px"
                     android:textColor="@android:color/white"
                     android:textSize="24px"
+                    android:text="2018年5月23日星期三  09：40"
                     />
             </com.zhy.autolayout.AutoRelativeLayout>
 

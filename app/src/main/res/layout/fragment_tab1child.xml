@@ -19,19 +19,19 @@
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="1"
+            android:maxEms="1"
             android:gravity="center_horizontal"
             android:paddingTop="10dp"
             android:textColor="@android:color/white"
             android:textSize="31px"
             android:textStyle="bold"
+            android:text="一级护理"
             />
         <TextView
             android:id="@+id/tv1_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingTop="10dp"
             android:textColor="@android:color/white"
             android:textSize="31px"
             android:textStyle="bold"
@@ -57,16 +57,17 @@
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
+                android:text="干体重"
                 />
         <TextView
             android:id="@+id/tv2_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingTop="10dp"
             android:textColor="@android:color/white"
             android:textSize="31px"
             android:textStyle="bold"
+            android:text="0"
             />
         </com.zhy.autolayout.AutoLinearLayout>
 
@@ -88,16 +89,17 @@
                 android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:text="本次前"/>
             <TextView
                 android:id="@+id/tv3_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
+                android:text="80.8"
                 />
         </com.zhy.autolayout.AutoLinearLayout>
 
@@ -119,16 +121,17 @@
                 android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:text="预脱"/>
             <TextView
                 android:id="@+id/tv4_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
+                android:text="80.0"
                 />
         </com.zhy.autolayout.AutoLinearLayout>
 
@@ -156,7 +159,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
@@ -187,7 +189,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
@@ -218,7 +219,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
@@ -249,7 +249,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
@@ -280,7 +279,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
@@ -311,7 +309,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="31px"
                 android:textStyle="bold"
