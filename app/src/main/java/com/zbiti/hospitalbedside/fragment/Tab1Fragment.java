@@ -258,6 +258,7 @@ public class Tab1Fragment extends BaseFragment {
 
                     mHandler.sendEmptyMessage(list.size());
 
+
                 }
             };
             mTimer.schedule(timerTask, 5000,5000);
